@@ -10,5 +10,5 @@ Some of the main features included in my game are
  
   2.Counting the number of wins of both the players.
   
-  3.Reset the score of plaeyrs to 0.
+  3.Reset the score of players to 0.
   
