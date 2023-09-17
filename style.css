@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box
+    
+}
+body{
+    background:  #3a3b3b;
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+.wrapper{
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.board{
+    width:400px;
+    height: 330px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.board .field{
+    height: 100px;
+    width:100px;
+    font-size: 80px;
+    font-weight:bold;
+    color: #0066ff;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+}
+.field:active:not(:disabled){
+    transform: scale(0.95);
+}
+
+/*Score of the player*/
+.scoreboard{
+    background: #fff;
+    width: 300px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+    border-radius: 6px;
+    box-shadow:1px 2px 20px rgba(0,0,0,0.5);
+}
+.scoreboard p{
+    padding: 10px 20px;
+    background: #ff0037;
+    font-size: 35px;
+    border-radius: 5px;
+}
+.scoreboard p span{
+    color: #73ff00;
+    font-size: 40 px;
+}
+/* REset-score */
+.reset-score{
+    padding: 10px 20px;
+    font-size: 35px;
+    background: #3838f5;
+    color: white;
+    letter-spacing: 2px;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* REstart Button */
+.restart{
+    position: absolute;
+    padding: 15px 30px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: greenyellow;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* Winning message */
+.popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg , rgba(0,0,0,0.3),rgba(0,0,0,0.7));
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    opacity :0;
+    display: none; 
+    transition: all 0.4s;
+
+}
+.message{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+.popup button{
+    padding: 10px 20px;
+    font-size: 40px;
+    background: #000;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 0;
+    outline: 0;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+.popup.show{
+    opacity: 1;
+    display: flex;
+
+}
+/*Set player who plays first */
+.first-player{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 25px;
+    background:green;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 4px;
+
+
+}
+button:hover{
+    filter: brightness(1.4);
+}
+
+
+
+/* css finish*/
